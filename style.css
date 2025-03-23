@@ -90,7 +90,7 @@ header .container .content .logo img {
 header .container .content .logo a {
   font: bold 1.2rem "Audiowide", sans-serif;
   text-decoration: none;
-  color: var(--white);
+  color: #fffafa;
 }
 
 header .container .content .nav button {
@@ -197,7 +197,7 @@ header .container .content .nav button:hover {
   bottom: -80%;
   width: 70em;
   height: 70em;
-  background-image: url("images/moon.webp");
+  background-image: url("images/moon.png");
   border-radius: 50%;
   background-size: cover;
   box-shadow: inset 6em -6em 8em #000, 2.5em -0.5em 4em #fff;
