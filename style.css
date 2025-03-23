@@ -740,3 +740,75 @@ header .container .content .nav button:hover {
         padding: 1rem;
     }
 }
+/* Responsive Design */
+@media screen and (max-width: 1024px) {
+  .about .container .content {
+    align-items: center;
+    text-align: center;
+  }
+
+  .about .container .content .text-action {
+    width: 60%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .about .container .content {
+    align-items: center;
+    text-align: center;
+  }
+
+  .about .container .content .text-action {
+    width: 80%;
+  }
+
+  .about .container .content h1 {
+    font-size: 2rem;
+  }
+
+  .about .container .content p {
+    font-size: 1rem;
+  }
+
+  .about .container .content a {
+    width: 50%;
+  }
+  .about {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .about {
+    background-position: left;
+  }
+
+  .about .container .content {
+    height: auto;
+    padding: 2rem 1rem;
+    align-items: center;
+    text-align: center;
+  }
+
+  .about .container .content .text-action {
+    width: 95%;
+  }
+
+  .about .container .content h1 {
+    font-size: 1.8rem;
+  }
+
+  .about .container .content p {
+    font-size: 0.9rem;
+  }
+
+  .about .container .content a {
+    width: 70%;
+  }
+  .about {
+    background-size: cover;
+    background-position: center;
+  }
+}
