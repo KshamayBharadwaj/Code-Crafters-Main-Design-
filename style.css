@@ -315,120 +315,193 @@ header .container .content .nav button:hover {
 
 /* Planets Section */
 .planets {
-  min-height: 100vh;
-  padding: 2rem 0;
+  height: auto;
+  padding: 5rem 10%;
+  background: #0d0d0d;
 }
 
-.planets .container .content {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 2rem;
-}
-
-.planets .container .content .title {
+.planets .container .title {
   text-align: center;
-  display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
+  margin-bottom: 3rem;
 }
 
-.planets .container .content .title h2 {
+.planets .container .title h1 {
+  font: 400 3rem "Audiowide", sans-serif;
+  color: #fffafa;
+  letter-spacing: 0.3rem;
+}
+
+.planets .container .title p {
+  font-size: 1.2rem;
   color: #a4a4a4;
-  font: bold 1.2rem "Audiowide", sans-serif;
+  max-width: 700px;
+  margin: auto;
 }
 
-.planets .container .content .title h1 {
-  font: bold 1.5rem "Audiowide", sans-serif;
-}
-
-.planets .container .content .title p {
-  width: 80%;
-  color: #a4a4a4;
-  margin: 0 auto;
-}
-
-.planets .container .content .planet-grid {
+.planets .content {
   display: grid;
-  grid-template-columns: 1fr;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 2rem;
-  width: 100%;
-  max-width: 800px;
+  place-items: center;
 }
 
-.planets .container .content .planet-grid .planet-card {
-  position: relative;
+.planets .content .items {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: space-between;
   padding: 2rem;
-  background: #0c0c0c;
+  height: 300px;
+  width: 100%;
+  max-width: 350px;
+  background-size: cover;
+  background-position: center;
   border: 2px solid #262626;
-  border-radius: 32px;
-  overflow: hidden;
-  box-shadow: 0px 4px 10px rgba(255, 255, 255, 0.1);
-  transition: transform 0.3s ease-in-out;
-  min-height: 400px;
-}
-
-.planets .container .content .planet-grid .planet-card:hover {
-  transform: translateY(-10px);
-}
-
-.planets .container .content .planet-grid .planet-card img {
-  width: 120px;
-  height: 120px;
-  border-radius: 50%;
-  margin-bottom: 1.5rem;
-  box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
-}
-
-.planets .container .content .planet-grid .planet-card h3 {
-  font: bold 1.5rem "Audiowide", sans-serif;
-  margin-bottom: 1rem;
-  color: #fffafa;
-}
-
-.planets .container .content .planet-grid .planet-card .description {
-  color: #a4a4a4;
+  border-radius: 20px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  position: relative;
   text-align: center;
+}
+
+.planets .content .items:hover {
+  transform: scale(1.05);
+  box-shadow: 0 15px 30px rgba(255, 255, 255, 0.15);
+  border-color: #ffffff88;
+}
+
+.planets .content .items h1 {
+  font: italic bold 1.6rem "Audiowide", sans-serif;
+  color: #fff;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+.planets .content .items a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid #a4a4a4;
+  border-radius: 12px;
+  color: #fff;
+  padding: 8px 14px;
   font-size: 1rem;
-  margin-bottom: 1.5rem;
-  line-height: 1.5;
+  gap: 0.5rem;
+  width: 160px;
+  text-decoration: none;
+  backdrop-filter: blur(4px);
+  background: rgba(255, 255, 255, 0.1);
+  transition: background 0.3s ease-in-out;
 }
 
-.planets .container .content .planet-grid .planet-card .planet-details {
-  text-align: center;
-  color: #d3d3d3;
-  font-size: 0.95rem;
-  line-height: 1.6;
+.planets .content .items a:hover {
+  background-color: #262626;
 }
 
-.planets .container .content .planet-grid .planet-card .planet-details p {
-  margin-bottom: 0.5rem;
+.planets .content .saturn {
+  background-image: url("images/Saturn1.png");
 }
 
-.planets .container .content .planet-grid .planet-card .planet-details p strong {
+.planets .content .moon {
+  background-image: url("images/moon.jpeg");
+}
+
+.planets .content .mercury {
+  background-image: url("images/Mercury.png");
+}
+
+.planets .content .mars {
+  background-image: url("images/Mars.png");
+}
+
+.planets .content .earth {
+  background-image: url("images/Earth.png");
+}
+
+/* Responsive*/
+@media (max-width: 768px) {
+  .planets {
+    padding: 3rem 5%;
+  }
+
+  .planets .content {
+    grid-template-columns: 1fr;
+  }
+
+  .planets .container .title h1 {
+    font-size: 2.5rem;
+  }
+
+  .planets .container .title p {
+    font-size: 1rem;
+  }
+
+  .planets .content .items {
+    height: 250px;
+    padding: 1.5rem;
+  }
+
+  .planets .content .items h1 {
+    font-size: 1.4rem;
+  }
+
+  .planets .content .items a {
+    width: 140px;
+    font-size: 0.9rem;
+  }
+}
+
+/* about-us */
+.about {
+  min-height: 100vh;
+  background: url("images/about.png");
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
+}
+
+.about .container .content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: end;
+  height: 100vh;
+}
+
+.about .container .content .text-action {
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.about .container .content h2 {
+  font: bold 1.5rem "Audiowide", sans-serif;
+  color: #a4a4a4;
+}
+
+.about .container .content h1 {
+  font: bold 2.5rem "Audiowide", sans-serif;
+}
+
+.about .container .content p {
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.about .container .content a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  padding: 10px;
+  border-radius: 32px;
+  text-decoration: none;
   color: #fffafa;
-}
-
-.planets .container .content .planet-grid .planet-card hr {
-  position: absolute;
-  top: -100%;
-  left: -150%;
-  width: 350%;
-  height: 5px;
-  transform: rotate(-40deg);
-  box-shadow: 0 0 5px #ffffff, 0 0 10px #ffffff, 0 0 20px #ffffff;
-  background: #fffafa;
-  border: none;
-  transition: all 0.5s ease-in;
-}
-
-.planets .container .content .planet-grid .planet-card:hover hr {
-  top: 100%;
-  left: 100%;
-  transition: 0.3s linear;
+  font-weight: bold;
+  background: #262626;
+  border: 2px solid #7a7a7a;
+  width: 25%;
 }
 
 /* Contact Section */
@@ -600,4 +673,70 @@ header .container .content .nav button:hover {
 @media (min-width: 769px) and (max-width: 1024px) {
   .mission .container .content .reason .card { width: 45%; }
   .planets .container .content .planet-grid { grid-template-columns: 1fr; }
+}
+@media (max-width: 1024px) {
+    .mission .container .content .reason {
+        gap: 1rem; /* Reduce gap between cards */
+    }
+
+    .mission .container .content .reason .card {
+        width: 45%; /* Adjust card width for medium screens */
+        height: auto;
+        padding: 1.5rem;
+    }
+
+    .mission .container .content .title p {
+        width: 70%; /* Increase text width for better readability */
+    }
+}
+
+@media (max-width: 768px) {
+    .mission .container .content {
+        height: auto;
+        padding: 2rem 0;
+    }
+
+    .mission .container .content .title {
+        margin-bottom: 2rem;
+    }
+
+    .mission .container .content .title h1 {
+        font-size: 1.8rem;
+    }
+
+    .mission .container .content .title h2 {
+        font-size: 1.3rem;
+    }
+
+    .mission .container .content .title p {
+        width: 80%;
+    }
+
+    .mission .container .content .reason {
+        flex-direction: column;
+        align-items: center;
+        gap: 2rem;
+    }
+
+    .mission .container .content .reason .card {
+        width: 80%; /* Make cards full-width on smaller screens */
+        max-width: 400px;
+        padding: 1.5rem;
+        height: auto;
+    }
+}
+
+@media (max-width: 480px) {
+    .mission .container .content .title h1 {
+        font-size: 1.5rem;
+    }
+
+    .mission .container .content .title h2 {
+        font-size: 1.2rem;
+    }
+
+    .mission .container .content .reason .card {
+        width: 90%;
+        padding: 1rem;
+    }
 }
