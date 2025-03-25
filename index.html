@@ -270,6 +270,33 @@
       </div>
     </footer>
 
+
+    <!-- Back to Top Button -->
+<button id="back-to-top" aria-label="Back to top">
+  <svg class="rocket-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+    <path d="M12 2L2 22h20L12 2z" />
+  </svg>
+</button>
+
+<!-- Back to Top Script -->
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    var backToTopButton = document.getElementById('back-to-top');
+    
+    window.addEventListener('scroll', function() {
+      if (window.scrollY > 100) {
+        backToTopButton.classList.add('show');
+      } else {
+        backToTopButton.classList.remove('show');
+      }
+    });
+    
+    backToTopButton.addEventListener('click', function() {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  });
+</script>
+
     <!-- AOS Script -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
