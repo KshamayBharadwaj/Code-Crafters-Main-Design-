@@ -812,3 +812,64 @@ header .container .content .nav button:hover {
     background-position: center;
   }
 }
+
+/* Back to Top Button */
+#back-to-top {
+  position: fixed;
+  bottom: 80px; /* Adjusted to clear the footer (60px height + buffer) */
+  right: 20px;
+  z-index: 10000; /* Ensure it’s above all other elements (footer has z-index: 1) */
+  background: none;
+  border: none;
+  cursor: pointer;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+  animation: float 3s ease-in-out infinite;
+}
+
+#back-to-top.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+.rocket-icon {
+  width: 50px;
+  height: 50px;
+  fill: #fffafa;
+  filter: drop-shadow(0 0 5px #fff);
+  animation: rocket-glow 2s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+@keyframes rocket-glow {
+  0%, 100% { filter: drop-shadow(0 0 5px #fff); }
+  50% { filter: drop-shadow(0 0 15px #fff); }
+}
+
+/* Responsive adjustment for back-to-top button */
+@media (max-width: 768px) {
+  #back-to-top {
+    bottom: 70px; /* Adjusted for smaller screens (footer height: 50px) */
+    right: 15px;
+  }
+  .rocket-icon {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+@media (max-width: 480px) {
+  #back-to-top {
+    bottom: 60px; /* Further adjusted for very small screens */
+    right: 10px;
+  }
+  .rocket-icon {
+    width: 35px;
+    height: 35px;
+  }
+}
